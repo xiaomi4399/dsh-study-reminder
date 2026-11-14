@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Study Reminder",
+    "description": "Manage study reminders in the sidebar. Each reminder pops a system-level Windows desktop card with sound and is synced to Windows Task Scheduler, so it still fires after DSH is closed."
+  }
+}

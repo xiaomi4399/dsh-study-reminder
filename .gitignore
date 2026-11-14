@@ -1,0 +1,11 @@
+# 依赖与构建产物
+node_modules/
+*.log
+
+# 系统文件
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# 本地验证用的原始截图（体积大，仓库只保留 docs/ 下的压缩版）
+verification/

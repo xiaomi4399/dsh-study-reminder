@@ -1,0 +1,59 @@
+{
+  "name": "dsh-study-reminder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manage study reminders in a sidebar panel; pop system-level Windows desktop cards with sound and sync every reminder to Windows Task Scheduler so they still fire when DSH is closed.",
+  "license": "MIT",
+  "author": "xiaomi4399",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaomi4399/dsh-study-reminder.git"
+  },
+  "homepage": "https://github.com/xiaomi4399/dsh-study-reminder#readme",
+  "bugs": {
+    "url": "https://github.com/xiaomi4399/dsh-study-reminder/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "reminder",
+    "study",
+    "windows",
+    "task-scheduler"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg",
+    "scripts/Popup-Reminder.ps1",
+    "scripts/Focus-DSH.ps1",
+    "scripts/Sync-Reminders.ps1",
+    "scripts/Migrate-Legacy.ps1"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
